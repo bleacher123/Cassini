@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nlg-FP-yVN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cassini View Controller-->
+        <scene sceneID="5VV-9s-IPs">
+            <objects>
+                <viewController id="119-wT-uat" customClass="CassiniViewController" customModule="Cassini" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8vQ-aa-eqG"/>
+                        <viewControllerLayoutGuide type="bottom" id="ta7-WJ-A6z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qwd-mW-Kwa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Gcz-8k-gzF">
+                                <rect key="frame" x="123" y="223" width="128" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GA-MC-YdM">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Earth"/>
+                                        <connections>
+                                            <segue destination="hrD-Fy-07e" kind="showDetail" identifier="Earth" id="nmy-B3-tEH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moa-f9-uLQ">
+                                        <rect key="frame" x="0.0" y="80" width="128" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Cassini"/>
+                                        <connections>
+                                            <segue destination="hrD-Fy-07e" kind="showDetail" identifier="Cassini" id="vea-Gp-fpI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8G-dS-fCO">
+                                        <rect key="frame" x="0.0" y="160" width="128" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Saturn"/>
+                                        <connections>
+                                            <segue destination="hrD-Fy-07e" kind="showDetail" identifier="Saturn" id="ZlP-10-kgc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gcz-8k-gzF" firstAttribute="centerY" secondItem="Qwd-mW-Kwa" secondAttribute="centerY" id="pwE-17-hKr"/>
+                            <constraint firstItem="Gcz-8k-gzF" firstAttribute="centerX" secondItem="Qwd-mW-Kwa" secondAttribute="centerX" id="rtk-dV-ALS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xMR-ft-mNO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZ6-SN-QM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-84" y="-1170"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="hLl-6n-jDY">
+            <objects>
+                <viewController id="cCe-2X-Shn" customClass="ImageViewController" customModule="Cassini" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gqm-LG-e5n"/>
+                        <viewControllerLayoutGuide type="bottom" id="nqE-Xh-u43"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2H4-lm-6y4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgG-k1-YRc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="N5i-vZ-K70">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rgG-k1-YRc" firstAttribute="top" secondItem="2H4-lm-6y4" secondAttribute="top" id="FwV-gk-Lem"/>
+                            <constraint firstItem="rgG-k1-YRc" firstAttribute="leading" secondItem="2H4-lm-6y4" secondAttribute="leading" id="gKZ-fS-QYL"/>
+                            <constraint firstAttribute="trailing" secondItem="rgG-k1-YRc" secondAttribute="trailing" id="k9E-hT-der"/>
+                            <constraint firstItem="rgG-k1-YRc" firstAttribute="bottom" secondItem="nqE-Xh-u43" secondAttribute="top" id="w4I-Jy-pYT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Zi-Ia-aur"/>
+                    <connections>
+                        <outlet property="scrollView" destination="rgG-k1-YRc" id="7TG-4V-wlq"/>
+                        <outlet property="spinner" destination="N5i-vZ-K70" id="Dwd-K4-9Hj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAJ-B7-I9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.80000000000001" y="-390.85457271364322"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="66I-dv-ajd">
+            <objects>
+                <splitViewController id="nlg-FP-yVN" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="tgK-Dx-5CA" kind="relationship" relationship="masterViewController" id="8FG-kd-LGu"/>
+                        <segue destination="hrD-Fy-07e" kind="relationship" relationship="detailViewController" id="osG-0z-WbV"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHw-h7-fjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1660" y="-1032"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="REA-rd-ouI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tgK-Dx-5CA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="w14-2R-j5d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="119-wT-uat" kind="relationship" relationship="rootViewController" id="XLM-BW-JuM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Or7-bt-DgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-820" y="-1169"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Gd-39-MNO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hrD-Fy-07e" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5FJ-Yg-cqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cCe-2X-Shn" kind="relationship" relationship="rootViewController" id="7CP-rF-0BV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pL8-t8-Liz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-730.39999999999998" y="-390.85457271364322"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="osG-0z-WbV"/>
+    </inferredMetricsTieBreakers>
+</document>
